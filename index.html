@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Muhammad Arsalan — Portfolio of data engineering, analytics, and web scraping projects. Airflow, PySpark, AWS, Power BI, Scrapy." />
+  <title>Muhammad Arsalan — Data Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="top" class="page-top" tabindex="-1" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="nav-logo" href="#top">Muhammad Arsalan</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero-inner">
+        <div class="hero-profile">
+          <img
+            class="hero-avatar"
+            src="assets/images/profile.jpg"
+            alt="Muhammad Arsalan"
+            width="140"
+            height="140"
+            loading="eager"
+          />
+          <p class="hero-eyebrow">Karachi, Pakistan · Open to Remote, Hybrid & On-site Roles</p>
+          <h1 id="hero-heading">Muhammad Arsalan</h1>
+          <p class="hero-tagline">I build data pipelines, dashboards &amp; scraping systems that scale.</p>
+          <p class="hero-summary">
+            Data Engineer, Analyst &amp; Extraction Specialist — turning raw data into
+            production pipelines, interactive analytics, and automated collection at scale.
+          </p>
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary">Explore My Work</a>
+            <a href="#resume" class="btn btn-secondary">Download Resume</a>
+            <a href="https://github.com/Muhammad-Arsalan-Ai" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+          </div>
+        </div>
+        <div class="hero-highlights" aria-label="Areas of expertise">
+          <div class="highlight-pill"><span class="pill-dot"></span> Data Engineering</div>
+          <div class="highlight-pill"><span class="pill-dot"></span> Data Analytics</div>
+          <div class="highlight-pill"><span class="pill-dot"></span> Web Scraping</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work / Projects -->
+    <section class="section work-section" id="work" aria-labelledby="work-heading">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Portfolio</span>
+          <h2 id="work-heading">Featured projects</h2>
+          <p class="section-lead">Real systems I've built — pipelines, dashboards, and scrapers deployed in production and on GitHub.</p>
+        </header>
+
+        <div class="filter-bar" role="tablist" aria-label="Filter projects">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter-btn" data-filter="engineering" role="tab" aria-selected="false">Engineering</button>
+          <button class="filter-btn" data-filter="analytics" role="tab" aria-selected="false">Analytics</button>
+          <button class="filter-btn" data-filter="scraping" role="tab" aria-selected="false">Scraping</button>
+        </div>
+
+        <div class="work-grid">
+          <!-- 1. Real-Time Stock & Crypto Pipeline -->
+          <article class="work-card work-card--featured work-card--diagram" data-category="engineering">
+            <div class="work-card-visual work-card-visual--diagram">
+              <img
+                src="assets/images/stock-crypto-pipeline.png"
+                alt="Real-Time Stock and Crypto Data Pipeline Automation architecture — Airflow, ETL, multi-database storage"
+                loading="eager"
+              />
+            </div>
+            <div class="work-card-body">
+              <div class="work-card-tags">
+                <span class="tag">Production · OfficeField</span>
+                <span class="tag tag--muted">Airflow · PostgreSQL · Qdrant</span>
+              </div>
+              <h3>Real-Time Stock &amp; Crypto Data Pipeline Automation</h3>
+              <p>
+                Apache Airflow-orchestrated pipeline ingesting real-time stock and crypto data from
+                5 financial APIs (FMP, Nasdaq, CoinMarketCap, CoinGecko, and more) — with parallelized
+                ETL execution across extraction, transformation, and validation stages.
+              </p>
+              <ul class="work-card-highlights">
+                <li>Reduced data refresh cycles from daily to sub-hourly with zero manual intervention</li>
+                <li>Multi-destination storage across MongoDB, PostgreSQL, AWS RDS, and Qdrant Vector DB — processing thousands of financial records daily</li>
+                <li>Automated data quality monitoring across 4 production systems — 99%+ accuracy verified for downstream analytics and ML vector search</li>
+                <li>Optimized Airflow task scheduling achieving 100% SLA compliance on real-time financial pipelines</li>
+              </ul>
+              <p class="work-card-impact">High-accuracy, low-latency data powering Analytics &amp; BI dashboards and ML models.</p>
+            </div>
+          </article>
+
+          <!-- 2. AWS Real-Time Data Streaming -->
+          <article class="work-card" data-category="engineering">
+            <div class="work-card-visual">
+              <img
+                src="https://raw.githubusercontent.com/Muhammad-Arsalan-Ai/AWS-Real-Time-Data-Streaming/main/Architecture.png"
+                alt="AWS Real-Time Data Streaming architecture diagram"
+                loading="lazy"
+              />
+            </div>
+            <div class="work-card-body">
+              <div class="work-card-tags">
+                <span class="tag">Data Engineering</span>
+                <span class="tag tag--muted">Kafka · AWS · Glue</span>
+              </div>
+              <h3>AWS Real-Time Data Streaming</h3>
+              <p>End-to-end pipeline using AWS EC2, Kafka, Jupyter notebooks, S3, AWS Glue Crawler, and Athena — producing CSV data via Kafka, consuming to S3, and auto-cataloging schemas.</p>
+              <div class="work-card-links">
+                <a href="https://github.com/Muhammad-Arsalan-Ai/AWS-Real-Time-Data-Streaming" target="_blank" rel="noopener noreferrer">GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. ETL Pipeline -->
+          <article class="work-card" data-category="engineering">
+            <div class="work-card-visual work-card-visual--engineering">
+              <span class="work-card-icon" aria-hidden="true">⚙️</span>
+            </div>
+            <div class="work-card-body">
+              <div class="work-card-tags">
+                <span class="tag">Data Engineering</span>
+                <span class="tag tag--muted">ETL · MySQL · PostgreSQL</span>
+              </div>
+              <h3>ETL Pipeline: Excel to MySQL &amp; PostgreSQL</h3>
+              <p>Complete ETL pipeline processing customer data from Excel — cleaning, segmenting by country, loading USA records into MySQL and UK/India into PostgreSQL with JSON metadata export.</p>
+              <div class="work-card-links">
+                <a href="https://github.com/Muhammad-Arsalan-Ai/ETL-Pipeline--Excel-to-MySQL-and-PostgreSQL" target="_blank" rel="noopener noreferrer">GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Counselor Recommendation -->
+          <article class="work-card" data-category="engineering">
+            <div class="work-card-visual work-card-visual--engineering">
+              <span class="work-card-icon" aria-hidden="true">🧠</span>
+            </div>
+            <div class="work-card-body">
+              <div class="work-card-tags">
+                <span class="tag">Data Engineering</span>
+                <span class="tag tag--muted">PySpark · Redis · Docker</span>
+              </div>
+              <h3>Counselor Recommendation System</h3>
+              <p>Recommendation system matching counselors by specialization using PySpark for processing, Redis for in-memory storage, and Dockerized ETL and matching services with cronjob-based data loading.</p>
+              <div class="work-card-links">
+                <a href="https://github.com/Muhammad-Arsalan-Ai/Capstone_Group_A" target="_blank" rel="noopener noreferrer">GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Financial Dashboard Power BI -->
+          <article class="work-card" data-category="analytics">
+            <div class="work-card-visual">
+              <img
+                src="https://raw.githubusercontent.com/Muhammad-Arsalan-Ai/Financial-Dashboard-PowerBi/main/assets/financial-dashboard-preview.png"
+                alt="Finance Department Dashboard Power BI preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="work-card-body">
+              <div class="work-card-tags">
+                <span class="tag">Data Analytics</span>
+                <span class="tag tag--muted">Power BI · DAX</span>
+              </div>
+              <h3>Financial Dashboard — Power BI</h3>
+              <p>Finance Department Dashboard analyzing sales, orders, profit, profit margin, discounts, countries, customer segments, and products — with YoY KPI comparisons and executive-level insights.</p>
+              <div class="work-card-links">
+                <a href="https://github.com/Muhammad-Arsalan-Ai/Financial-Dashboard-PowerBi" target="_blank" rel="noopener noreferrer">GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. Consumer Financial Complaints -->
+          <article class="work-card" data-category="analytics">
+            <div class="work-card-visual work-card-visual--analytics">
+              <span class="work-card-icon" aria-hidden="true">📊</span>
+            </div>
+            <div class="work-card-body">
+              <div class="work-card-tags">
+                <span class="tag">Data Analytics</span>
+                <span class="tag tag--muted">Streamlit · Python</span>
+              </div>
+              <h3>Consumer Financial Complaints Dashboard</h3>
+              <p>Interactive Streamlit dashboard for exploring consumer financial complaints — with data filters, trend charts, pie charts, visualizations, and exportable filtered datasets.</p>
+              <div class="work-card-links">
+                <a href="https://github.com/Muhammad-Arsalan-Ai/Consumer-Financial-Complaints-Dashboard" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                <a href="https://appassignment-complains.streamlit.app/" target="_blank" rel="noopener noreferrer">Live Demo →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7. GovFinder -->
+          <article class="work-card" data-category="scraping">
+            <div class="work-card-visual work-card-visual--scraping">
+              <span class="work-card-icon" aria-hidden="true">🕷️</span>
+            </div>
+            <div class="work-card-body">
+              <div class="work-card-tags">
+                <span class="tag">Client Project</span>
+                <span class="tag tag--muted">Scrapy · PostgreSQL</span>
+              </div>
+              <h3>GovFinder Web Scraping</h3>
+              <p>Automated scraping tool extracting names, positions, and emails of American government officials from multiple official websites into a searchable structured database.</p>
+              <p class="work-card-impact">Contact discovery reduced from hours to seconds.</p>
+              <div class="work-card-links">
+                <a href="https://github.com/Muhammad-Arsalan-Ai/GoV-Finder" target="_blank" rel="noopener noreferrer">GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8. Tamimi Markets -->
+          <article class="work-card" data-category="scraping">
+            <div class="work-card-visual work-card-visual--api">
+              <span class="work-card-icon" aria-hidden="true">📦</span>
+            </div>
+            <div class="work-card-body">
+              <div class="work-card-tags">
+                <span class="tag">Web Scraping</span>
+                <span class="tag tag--muted">Python · REST API</span>
+              </div>
+              <h3>Tamimi Markets Product Scraper</h3>
+              <p>Scalable extraction pipeline leveraging REST APIs to collect and normalize product data across 26 retail categories with automated pagination, retry handling, and fault tolerance.</p>
+              <div class="work-card-links">
+                <a href="https://github.com/Muhammad-Arsalan-Ai/Tamimi-Markets-Product-Scraper" target="_blank" rel="noopener noreferrer">GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 9. WOB Scrapper -->
+          <article class="work-card" data-category="scraping">
+            <div class="work-card-visual work-card-visual--scraping">
+              <span class="work-card-icon" aria-hidden="true">📚</span>
+            </div>
+            <div class="work-card-body">
+              <div class="work-card-tags">
+                <span class="tag">Web Scraping</span>
+                <span class="tag tag--muted">Scrapy · JSON-LD</span>
+              </div>
+              <h3>WOB Product Sitemap Scraper</h3>
+              <p>Scrapy spider that extracts product offer data from the WOB sitemap — ISBN, SKU, price, availability, item condition, and currency — exporting in-stock products to CSV via structured JSON-LD parsing.</p>
+              <div class="work-card-links">
+                <a href="https://github.com/Muhammad-Arsalan-Ai/Wob-Scrapper" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                <a href="https://www.wob.com/" target="_blank" rel="noopener noreferrer">wob.com →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section-alt" id="about" aria-labelledby="about-heading">
+      <div class="container about-layout">
+        <header class="section-header">
+          <span class="section-tag">About</span>
+          <h2 id="about-heading">Hi, I'm Arsalan</h2>
+        </header>
+        <div class="about-content">
+          <p>
+            I'm a data professional with 3+ years of experience across engineering, analytics,
+            and web scraping. I love building things that make data useful — whether that's a
+            real-time Kafka pipeline on AWS, a Power BI dashboard for executives, or a Scrapy
+            spider pulling millions of records overnight.
+          </p>
+          <p>
+            Currently at <strong>OfficeField</strong> engineering real-time stock and crypto data
+            pipelines with Apache Airflow. Previously at <strong>Xloop Digital Services</strong> building PySpark and
+            streaming systems. I've also delivered 30+ freelance scraping projects on UpWork
+            and Fiverr.
+          </p>
+          <p class="about-edu">
+            B.S. Computer Science — Sir Syed University of Engineering and Technology (2019–2023)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <header class="section-header section-header-center">
+          <span class="section-tag">Toolkit</span>
+          <h2 id="skills-heading">Technologies I use</h2>
+        </header>
+        <div class="skills-cloud">
+          <div class="skill-group">
+            <h3>Data Engineering</h3>
+            <div class="skill-pills">
+              <span>Data Pipelines</span><span>ETL/ELT Pipelines</span><span>Apache Airflow</span>
+              <span>Data Orchestration</span><span>Workflow Automation</span><span>PySpark</span>
+              <span>SparkSQL</span><span>Distributed Data Processing</span><span>Apache Kafka</span>
+              <span>Real-Time Data Streaming</span><span>Batch Processing</span><span>Data Modeling</span>
+              <span>Data Warehousing</span><span>Data Lake</span><span>Lakehouse Architecture</span>
+              <span>Delta Lake</span><span>Databricks</span><span>Snowflake</span>
+              <span>Medallion Architecture</span><span>OLAP</span><span>OLTP</span>
+              <span>Data Quality Monitoring</span><span>Data Governance</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Languages &amp; Frameworks</h3>
+            <div class="skill-pills">
+              <span>Python</span><span>JavaScript</span><span>SQL</span><span>Flask</span>
+              <span>FastAPI</span><span>HTML</span><span>CSS</span><span>Bootstrap</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Cloud &amp; Infrastructure</h3>
+            <div class="skill-pills">
+              <span>AWS S3</span><span>AWS Athena</span><span>AWS Glue</span><span>AWS EMR</span>
+              <span>AWS Lambda</span><span>AWS Kinesis</span><span>AWS Redshift</span>
+              <span>AWS RDS</span><span>AWS EC2</span><span>AWS IAM</span>
+              <span>Azure ADF</span><span>Azure Data Lake</span><span>Azure Synapse</span>
+              <span>Cloud Data Architecture</span><span>Serverless Pipelines</span>
+              <span>Docker</span><span>Linux</span><span>CI/CD</span>
+              <span>Scalable Systems</span><span>Production Systems</span><span>Performance Optimization</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Databases</h3>
+            <div class="skill-pills">
+              <span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span><span>Qdrant</span>
+              <span>Redis</span><span>QuestDB</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Data Analysis &amp; Visualization</h3>
+            <div class="skill-pills">
+              <span>Power BI</span><span>DAX</span><span>OLAP</span><span>Streamlit</span>
+              <span>Matplotlib</span><span>Seaborn</span><span>Pandas</span><span>NumPy</span><span>Statistics</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>AI &amp; LLMs</h3>
+            <div class="skill-pills">
+              <span>LangChain</span><span>RAG Pipelines</span><span>LLM Applications</span>
+              <span>Prompt Engineering</span><span>OpenAI API</span><span>Gemini</span>
+              <span>Hugging Face</span><span>Computer Vision</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Tools &amp; Workflow</h3>
+            <div class="skill-pills">
+              <span>Git</span><span>Scrapy</span><span>Selenium</span><span>BeautifulSoup</span>
+              <span>Web Scraping</span><span>Jira</span><span>ClickUp</span><span>Excel</span><span>Google Sheets</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume -->
+    <section class="section section-alt" id="resume" aria-labelledby="resume-heading">
+      <div class="container">
+        <header class="section-header section-header-center">
+          <span class="section-tag">Resume</span>
+          <h2 id="resume-heading">Download my resume</h2>
+          <p class="section-lead section-lead-center">
+            Three role-focused versions — pick the one that matches the job you're hiring for.
+          </p>
+        </header>
+        <div class="resume-grid">
+          <a href="assets/resumes/Muhammad_Arsalan_Data_Engineer.pdf" class="resume-card" download>
+            <span class="resume-icon" aria-hidden="true">📄</span>
+            <h3>Data Engineer</h3>
+            <p>Airflow · PySpark · Kafka · AWS · Azure · ETL/ELT pipelines</p>
+            <span class="resume-download">Download PDF ↓</span>
+          </a>
+          <a href="assets/resumes/Muhammad_Arsalan_Data_Analyst.pdf" class="resume-card" download>
+            <span class="resume-icon" aria-hidden="true">📄</span>
+            <h3>Data Analyst</h3>
+            <p>SQL · Power BI · Python · Data visualization · Reporting</p>
+            <span class="resume-download">Download PDF ↓</span>
+          </a>
+          <a href="assets/resumes/Muhammad_Arsalan_Web_Scraping.pdf" class="resume-card" download>
+            <span class="resume-icon" aria-hidden="true">📄</span>
+            <h3>Web Scraping</h3>
+            <p>Scrapy · Selenium · BeautifulSoup · Data extraction</p>
+            <span class="resume-download">Download PDF ↓</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience (compact) -->
+    <section class="section section-alt" id="experience" aria-labelledby="experience-heading">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Background</span>
+          <h2 id="experience-heading">Where I've worked</h2>
+        </header>
+        <div class="exp-grid">
+          <article class="exp-card">
+            <time datetime="2025-05">May 2025 – Present</time>
+            <h3>Data Engineer</h3>
+            <p class="exp-company">OfficeField</p>
+            <p class="exp-summary">Airflow-orchestrated real-time financial data pipelines across 5 APIs, multi-destination storage (MongoDB, PostgreSQL, RDS, Qdrant), and 99%+ data quality monitoring.</p>
+          </article>
+          <article class="exp-card">
+            <time datetime="2024-07">Jul 2024 – Apr 2025</time>
+            <h3>Data Extraction Specialist</h3>
+            <p class="exp-company">UpWork &amp; Fiverr</p>
+            <p class="exp-summary">30+ scraping projects delivering millions of records from dynamic, JavaScript-rendered, and CAPTCHA-protected sites with 98%+ extraction completeness.</p>
+          </article>
+          <article class="exp-card">
+            <time datetime="2023-02">Feb 2023 – Jun 2024</time>
+            <h3>Data Engineer</h3>
+            <p class="exp-company">Xloop Digital Services</p>
+            <p class="exp-summary">PySpark and AWS Glue pipelines, Kafka streaming on EC2, multi-database ETL, and DAX-optimized Power BI dashboards for financial complaint analytics.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-box">
+          <header>
+            <span class="section-tag">Contact</span>
+            <h2 id="contact-heading">Let's work together</h2>
+            <p>Open to remote roles and collaborations in data engineering, analytics, and extraction.</p>
+          </header>
+          <div class="contact-links">
+            <a href="mailto:marsalan8@outlook.com" class="contact-link">
+              <span class="contact-link-label">Email</span>
+              <span>marsalan8@outlook.com</span>
+            </a>
+            <a href="tel:+923246783480" class="contact-link">
+              <span class="contact-link-label">Phone</span>
+              <span>+92 324 678 3480</span>
+            </a>
+            <a href="https://www.linkedin.com/in/muhammad-arsalan-ai/" class="contact-link" target="_blank" rel="noopener noreferrer">
+              <span class="contact-link-label">LinkedIn</span>
+              <span>muhammad-arsalan-ai</span>
+            </a>
+            <a href="https://github.com/Muhammad-Arsalan-Ai" class="contact-link" target="_blank" rel="noopener noreferrer">
+              <span class="contact-link-label">GitHub</span>
+              <span>Muhammad-Arsalan-Ai</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Muhammad Arsalan</p>
+      <div class="footer-links">
+        <a href="https://github.com/Muhammad-Arsalan-Ai" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/muhammad-arsalan-ai/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="fab-group" aria-label="Quick actions">
+    <button type="button" class="fab fab--top" id="back-to-top" aria-label="Back to top" hidden>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+      </svg>
+    </button>
+    <a
+      href="https://wa.me/923246783480?text=Hi%20Muhammad%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect."
+      class="fab fab--whatsapp"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+    >
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
