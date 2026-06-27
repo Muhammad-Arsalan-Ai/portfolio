@@ -38,21 +38,38 @@
     }
   });
 
-  /* Project filter */
-  filterBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const filter = btn.dataset.filter;
+  /* Project filter — supports multi-category cards */
+  const applyFilter = (filter) => {
+    filterBtns.forEach((b) => {
+      const isActive = b.dataset.filter === filter;
+      b.classList.toggle("active", isActive);
+      b.setAttribute("aria-selected", isActive ? "true" : "false");
+    });
 
-      filterBtns.forEach((b) => {
-        b.classList.toggle("active", b === btn);
-        b.setAttribute("aria-selected", b === btn ? "true" : "false");
-      });
+    workCards.forEach((card) => {
+      const categories = (card.dataset.category || "").split(/\s+/);
+      const show = filter === "all" || categories.includes(filter);
+      card.classList.toggle("hidden", !show);
+      card.setAttribute("aria-hidden", show ? "false" : "true");
+    });
+  };
 
-      workCards.forEach((card) => {
-        const category = card.dataset.category;
-        const show = filter === "all" || category === filter;
-        card.classList.toggle("hidden", !show);
-      });
+  filterBtns.forEach((btn, index) => {
+    btn.addEventListener("click", () => applyFilter(btn.dataset.filter));
+
+    btn.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+        e.preventDefault();
+        const next =
+          e.key === "ArrowRight"
+            ? (index + 1) % filterBtns.length
+            : (index - 1 + filterBtns.length) % filterBtns.length;
+        filterBtns[next].focus();
+      }
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        applyFilter(btn.dataset.filter);
+      }
     });
   });
 
@@ -79,7 +96,7 @@
 
   /* Fade-in */
   const fadeEls = document.querySelectorAll(
-    ".work-card, .exp-card, .skill-group, .contact-box, .resume-card"
+    ".work-card, .exp-card, .skill-group, .contact-box, .resume-card, .hero-stat"
   );
 
   fadeEls.forEach((el) => el.classList.add("fade-in"));
